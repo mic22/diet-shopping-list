@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <style>
+      @media print {
+        #list {
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 9999;
+          background: white;
+        }
+
+        input, input:not(:checked) + label {
+          display: none;
+        }
+      }
+
+      input:not(:checked) + label {
+        text-decoration: line-through;
+      }
+
+      textarea {
+        width: 100%;
+        height: 500px;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .col {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body onload="run()">
+    <div class="row">
+      <div class="col">
+        <h2>Input</h2>
+        <textarea id="input">
+Chleb 200g (5 kromek)
+Chleb 100g (3 kromki)</textarea>
+        <button onclick="run()">process</button>
+      </div>
+      <div class="col" id="list">
+        <h2>Shopping list</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
