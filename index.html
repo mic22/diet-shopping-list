@@ -15,6 +15,10 @@
         input, input:not(:checked) + label {
           display: none;
         }
+
+        #list button {
+          display: none;
+        }
       }
 
       input:not(:checked) + label {
@@ -47,6 +51,7 @@ Chleb 100g (3 kromki)</textarea>
       <div class="col" id="list">
         <h2>Shopping list</h2>
         <div id="result"></div>
+        <button onclick="window.print()">print or save to pdf</button>
       </div>
     </div>
     <script src="script.js"></script>
